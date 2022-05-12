@@ -1,17 +1,86 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import PriceTag from './components/PriceTag';
+function Sample(props) {
+let data = [
+    
+  {
+    product:"FREE",
+    price:'0',
+    users:"Single User",
+    usersEnabler:true,
+    storage:"5GB Storage",
+    storageEnabler:true,
+    publicProjects:"Unlimited Public Projects",
+    publicProjectsEnabler:true,
+    communityAccess:"Community Access",
+    communityAccessEnabler:true,
+    privateProjects:"Unlimited Private Projects",
+    privateProjectsEnabler:false,
+    phonesupport:"Dedicated Phone Support",
+    phonesupportEnabler:false,
+    subDomain:"Free Subdomain",
+    subDomainEnabler:false,
+    reports:"Monthly Status Reports",
+    reportsEnabler:false
+  },
+  {
+    product:"PLUS",
+    price:'9',
+    users:"5 User",
+    usersEnabler:true,
+    storage:"50GB Storage",
+    storageEnabler:true,
+    publicProjects:"Unlimited Public Projects",
+    publicProjectsEnabler:true,
+    communityAccess:"Community Access",
+    communityAccessEnabler:true,
+    privateProjects:"Unlimited Private Projects",
+    privateProjectsEnabler:true,
+    phonesupport:"Dedicated Phone Support",
+    phonesupportEnabler:true,
+    subDomain:"Free Subdomain",
+    subDomainEnabler:true,
+    reports:"Monthly Status Reports",
+    reportsEnabler:false
+  }, 
+  {
+  product:"PLUS",
+  price:'49',
+  users:"Unlimited User",
+  usersEnabler:true,
+  storage:"50GB Storage",
+  storageEnabler:true,
+  publicProjects:"Unlimited Public Projects",
+  publicProjectsEnabler:true,
+  communityAccess:"Community Access",
+  communityAccessEnabler:true,
+  privateProjects:"Unlimited Private Projects",
+  privateProjectsEnabler:true,
+  phonesupport:"Dedicated Phone Support",
+  phonesupportEnabler:true,
+  subDomain:"Unlimited Free Subdomain",
+  subDomainEnabler:true,
+  reports:"Monthly Status Reports",
+  reportsEnabler:true
+}
+]
 
+return<>
+    <section class="pricing py-5">
+  <div class="container">
+    <div class="row">
+    <PriceTag type={data[0 ]}/>
+    <PriceTag type={data[1]}/>
+    <PriceTag type={data[2]}/>
+    
+ </div>
+  </div>
+</section>
+    </>
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+root.render(<Sample/>)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  
